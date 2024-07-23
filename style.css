@@ -1,0 +1,12 @@
+body {
+    background-color: bisque;
+}
+
+#container{
+    display:flex;
+    background-color: pink;
+    gap: 0px;
+    min-width: 500px;
+    max-width: 600px;
+    min-height: 500px;
+}
