@@ -1,12 +1,24 @@
 body {
-    background-color: bisque;
+    background-color: black;
 }
 
 #container{
     display:flex;
-    background-color: pink;
+    background-color: wheat;
     gap: 0px;
-    min-width: 500px;
-    max-width: 600px;
-    min-height: 500px;
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    margin: 5px;
+    justify-content: center;
+    overflow:auto ;
+}
+
+#reset{
+    background-color: black;
+    color: wheat;
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: gray;
+    border-style: groove;
 }

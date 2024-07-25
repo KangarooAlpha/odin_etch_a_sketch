@@ -11,14 +11,16 @@ function createGrid(size){
             
             outerDivs.appendChild(innerDivs);
 
-            innerDivs.style.margin = "0px";
+            innerDivs.style.margin = "none";
             innerDivs.style.border = "1px black";
             innerDivs.style.borderStyle = "solid";
-            innerDivs.style.padding = "2px";  
-            innerDivs.style.minWidth = "10px";
-            innerDivs.style.minHeight = "10px"
+            innerDivs.style.padding = `calc(100%/${size})`;  
+            innerDivs.style.minWidth = `calc(100px * (1/${size}`;
+            innerDivs.style.minHeight = `calc(100px * (1/${size}`;
             innerDivs.style.backgroundColor = "white";
-            innerDivs.textContent = j
+        //    innerDivs.style.height = "calc(100%/${size})";
+            innerDivs.style.width = `calc(100%/${size})`;
+
         }
         container.appendChild(outerDivs)
     }
