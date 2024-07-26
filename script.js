@@ -5,25 +5,29 @@ function createGrid(size = 16){
     for (let i = 0; i < size ; i++){
         var outerDivs = document.createElement("div")
         outerDivs.classList.toggle("drawing_board")
+
+        outerDivs.style.display = "flex";
+        outerDivs.style.flexDirection = "column"
+        outerDivs.style.flex = "1 auto"
         
         for (let j = 0; j <size ; j++){
             var innerDivs = document.createElement("div")
             innerDivs.classList.toggle("drawing_board")
             
             outerDivs.appendChild(innerDivs);
-
             innerDivs.style.margin = "none";
-            innerDivs.style.border = "1px black";
-            innerDivs.style.borderStyle = "solid";
- //           innerDivs.style.padding = `calc(100%/${size})`;  
-            innerDivs.style.minWidth = `calc(500px/(2*${size}))`;
-            innerDivs.style.minHeight = `calc(500px/(2*${size}))`;
+            innerDivs.style.border = "none";
+//            innerDivs.style.borderStyle = "solid";
+            innerDivs.style.padding = `calc(100%/${size})`;  
+            innerDivs.style.minWidth = `calc(500px/(${size}))`;
+            innerDivs.style.minHeight = `calc(500px/(${size}))`;
             innerDivs.style.backgroundColor = "white";
-   //         innerDivs.style.height = `calc(100%/${size})`;
-   //         innerDivs.style.width = `calc(100%/${size})`;
+          innerDivs.style.height = "100%";
+          innerDivs.style.width = "100%";
 
         }
-
+        outerDivs.style.height = "100%";
+        outerDivs.style.width = "100%";
         container.appendChild(outerDivs)
     }
     toDraw()
@@ -45,8 +49,7 @@ function toDraw(){
     var drawingBoard = document.querySelectorAll(".drawing_board")
     drawingBoard.forEach(function(square){
         square.addEventListener("mouseover", function(e) { 
-            console.log(1)
-            square.style.backgroundColor = "black"
+            square.style.backgroundColor = "green"
 
     })
     })
@@ -57,7 +60,7 @@ function toReset(){
     var drawingBoard = document.querySelectorAll(".drawing_board")
     reset.addEventListener("click", ()=> {
         drawingBoard.forEach(function(square){
-                square.style.backgroundColor = "white"
+               square.style.backgroundColor = "white"
             })
         })
 }
@@ -68,5 +71,9 @@ function askUser(){
     if (isNaN(result)) {
        return (askUser());
     }
+    if (result > 100) {
+        result = (100);
+    }
+    console.log(result) 
     return result;
 }

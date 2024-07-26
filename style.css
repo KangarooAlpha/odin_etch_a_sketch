@@ -1,6 +1,9 @@
 body {
     background-color: black;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1 auto;
+    align-items: center;
     justify-content: center;
 }
 
@@ -8,12 +11,15 @@ body {
     display:flex;
     background-color: wheat;
     gap: 0px;
-    width: 500px;
-    height: 500px;
-    padding: 10px;
+    min-width: 500px;
+    min-height: 500px;
+    max-width: 500px;
+    max-height: 500px;
+    padding: none;
     margin: 5px;
-    justify-content: center;
-    overflow:auto ;
+    justify-content: center; 
+    overflow: none;
+    z-index: 3;
 }
 
 #reset, #input{
