@@ -1,5 +1,7 @@
 body {
     background-color: black;
+    align-content: center;
+    justify-content: center;
 }
 
 #container{
@@ -14,7 +16,7 @@ body {
     overflow:auto ;
 }
 
-#reset{
+#reset, #input{
     background-color: black;
     color: wheat;
     border-radius: 20px;
